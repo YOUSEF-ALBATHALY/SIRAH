@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مختصر السيرة النبوية وصحابة النبي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Amiri', serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: right;
+            direction: rtl;
+        }
+        .button {
+            background-color: #ffb74d;
+            color: #1f1f1f;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        .button:hover {
+            background-color: #ffa726;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            background-color: #2e2e2e;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .content.active {
+            display: block;
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+            padding: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .content h2, .content h3 {
+            color: #ffb74d;
+            margin-top: 0;
+        }
+        .content p {
+            text-align: justify;
+            margin: 10px 0;
+        }
+        .content p:first-of-type {
+            margin-top: 0;
+        }
+        .content p:last-of-type {
+            margin-bottom: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .button-container .button {
+            flex: 1;
+        }
+        @media (min-width: 600px) {
+            .button-container .button {
+                max-width: calc(50% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="mainTitle">مختصر السيرة النبوية وصحابة النبي</h1>
+    </header>
+    <div class="container">
+        <div class="button-container">
+            <button class="button" onclick="showContent('sira')" id="siraButton">مختصر السيرة النبوية</button>
+            <button class="button" onclick="showContent('abuBakr')" id="abuBakrButton">مختصر سيرة أبو بكر الصديق</button>
+            <button class="button" onclick="showContent('umar')" id="umarButton">مختصر سيرة عمر بن الخطاب</button>
+            <button class="button" onclick="showContent('uthman')" id="uthmanButton">مختصر سيرة عثمان بن عفان</button>
+            <button class="button" onclick="showContent('ali')" id="aliButton">مختصر سيرة علي بن أبي طالب</button>
+            <button class="button" id="languageButton" onclick="toggleLanguage()">English</button>
+        </div>
+
+        <div id="sira" class="content">
+            <h2 id="siraTitle">سيرة النبي محمد صلى الله عليه وسلم</h2>
+            <p id="siraText">
+                وُلد النبي محمد صلى الله عليه وسلم في مكة في عام الفيل، وكان ذلك في الثاني عشر من ربيع الأول. نشأ يتيم الأب والأم، حيث توفي والده عبد الله قبل ولادته، وتوفيت والدته آمنة بنت وهب وهو في سن السادسة. كفله جده عبد المطلب ثم عمه أبو طالب.
+                <br><br>
+                عاش النبي محمد صلى الله عليه وسلم حياة بسيطة في بداية حياته، حيث عمل راعياً للغنم في صغره، وكان معروفاً بصدقه وأمانته بين قومه. تزوج من السيدة خديجة بنت خويلد رضي الله عنها وهو في سن الخامسة والعشرين، وأنجب منها جميع أبنائه ما عدا إبراهيم.
+                <br><br>
+                قصة إعادة بناء الكعبة: عندما كان النبي صلى الله عليه وسلم في الخامسة والثلاثين من عمره، اجتمعت قريش لإعادة بناء الكعبة بعد أن تصدعت جدرانها. وعندما وصلوا إلى وضع الحجر الأسود، اختلفت القبائل حول من يضعه في مكانه. لحل هذا النزاع، اقترحوا أن يحكم بينهم أول من يدخل المسجد. وكان النبي محمد صلى الله عليه وسلم هو أول من دخل. فوضع الحجر في رداء وطلب من رؤساء القبائل حمل الرداء معاً، ثم وضع الحجر بنفسه في مكانه.
+            </p>
+            <h3 id="prophethoodTitle">البعثة النبوية</h3>
+            <p id="prophethoodText">
+                بدأ الوحي ينزل على النبي محمد صلى الله عليه وسلم عندما كان في الأربعين من عمره، وذلك عندما كان يتعبد في غار حراء. وكانت أول آية نزلت عليه هي: "اقرأ باسم ربك الذي خلق". بدأت الدعوة إلى الإسلام سرًا، ثم جهر النبي بالدعوة بعد ثلاثة سنوات من بدء الوحي.
+                <br><br>
+                قصة نزول الوحي: كان النبي صلى الله عليه وسلم يتعبد في غار حراء، فجاءه جبريل عليه السلام وقال له: "اقرأ". فقال النبي: "ما أنا بقارئ". ثم أعاد جبريل قوله مرتين حتى قال النبي: "ما أنا بقارئ". ثم قال له جبريل: "اقرأ باسم ربك الذي خلق، خلق الإنسان من علق، اقرأ وربك الأكرم، الذي علم بالقلم، علم الإنسان ما لم يعلم".
+                <br><br>
+                واجه النبي محمد صلى الله عليه وسلم وأصحابه الكثير من العذاب والاضطهاد من قبل قريش، ولكنهم استمروا في الدعوة إلى الله. أسلم عدد من كبار الصحابة في بداية الدعوة مثل أبي بكر الصديق، وعمر بن الخطاب، وعثمان بن عفان، وعلي بن أبي طالب.
+                <br><br>
+                قصة إسلام عمر بن الخطاب: كان عمر بن الخطاب من أشد المعارضين للإسلام، ولكنه أسلم بعد أن سمع آيات من القرآن الكريم. ذهب عمر إلى بيت أخته فاطمة ليعرف حقيقة إسلامها، فسمعها تقرأ سورة طه. تأثر عمر بكلمات القرآن وطلب من أخته أن يقرأه بنفسه. وبعد قراءته، ذهب إلى النبي محمد صلى الله عليه وسلم وأعلن إسلامه.
+            </p>
+            <h3 id="migrationTitle">الهجرة</h3>
+            <p id="migrationText">
+                عندما اشتد أذى قريش للمسلمين، أذن الله لنبيه بالهجرة إلى المدينة المنورة. وكان ذلك في السنة الثالثة عشرة من البعثة النبوية. استقبل أهل المدينة النبي محمد صلى الله عليه وسلم وأصحابه بالترحيب والأنصار.
+                <br><br>
+                قصة الهجرة: خططت قريش لقتل النبي صلى الله عليه وسلم، ولكنه علم بخطتهم وخرج من مكة ليلاً مع صاحبه أبي بكر الصديق. اختبأ النبي وصاحبه في غار ثور لمدة ثلاثة أيام. ثم واصلا الرحلة إلى المدينة. وفي الطريق، وقعت أحداث عديدة مثل حادثة سراقة بن مالك الذي حاول القبض على النبي ولكنه فشل.
+                <br><br>
+                كانت الهجرة حدثاً مفصلياً في تاريخ الإسلام، حيث بدأ المسلمون في بناء مجتمع جديد في المدينة. وقد آخى النبي صلى الله عليه وسلم بين المهاجرين والأنصار، ووضع أسس الدولة الإسلامية الجديدة.
+            </p>
+            <h3 id="medinaTitle">الحياة في المدينة</h3>
+            <p id="medinaText">
+                في المدينة، أسس النبي محمد صلى الله عليه وسلم الدولة الإسلامية الأولى. وبدأ ببناء المسجد النبوي، وآخى بين المهاجرين والأنصار، ووضع صحيفة المدينة التي نظمت العلاقات بين المسلمين وغيرهم من سكان المدينة.
+                <br><br>
+                قصة بناء المسجد النبوي: عند وصول النبي صلى الله عليه وسلم إلى المدينة، اشترى قطعة أرض لبناء المسجد. شارك النبي بنفسه في نقل الحجارة وبناء المسجد. كان المسجد مركزاً للحياة الاجتماعية والدينية والسياسية في المدينة.
+                <br><br>
+                خاض المسلمون العديد من الغزوات والمعارك للدفاع عن الإسلام والمجتمع المسلم، وكانت أبرز هذه الغزوات: غزوة بدر، غزوة أحد، غزوة الأحزاب. كما عقد النبي محمد صلى الله عليه وسلم عدة معاهدات واتفاقيات مع القبائل المجاورة لضمان السلام ونشر الدعوة الإسلامية.
+                <br><br>
+                قصة غزوة بدر: كانت أول معركة كبرى بين المسلمين وقريش. على الرغم من أن المسلمين كانوا أقل عدداً وعتاداً، إلا أنهم انتصروا بنصر من الله. قتل في المعركة العديد من قادة قريش، وأسر المسلمون عدداً كبيراً من الأسرى.
+                <br><br>
+                قصة غزوة الأحزاب: تجمعت قبائل مختلفة للهجوم على المدينة، وحفر المسلمون خندقاً حول المدينة للدفاع عنها. حاصر الأحزاب المدينة لمدة شهر، ولكن بفضل حكمة النبي وتعاون المسلمين، تمكنوا من صد الهجوم.
+            </p>
+            <h3 id="deathTitle">الوفاة</h3>
+            <p id="deathText">
+                توفي النبي محمد صلى الله عليه وسلم في الثاني عشر من ربيع الأول في السنة الحادية عشرة للهجرة. ودفن في حجرة السيدة عائشة بجانب المسجد النبوي في المدينة المنورة.
+                <br><br>
+                قصة مرض النبي ووفاته: بدأ النبي يشعر بأعراض المرض بعد حجة الوداع، واستمر مرضه لعدة أيام. في أيامه الأخيرة، استأذن من زوجاته أن يبقى في بيت عائشة رضي الله عنها. عندما اشتد به المرض، جمع الصحابة وأوصاهم بالتمسك بالقرآن والسنة. وفي يوم وفاته، خرج النبي إلى المسجد وأمّ الناس في الصلاة ثم عاد إلى بيته حيث توفي.
+                <br><br>
+                كانت وفاة النبي محمد صلى الله عليه وسلم حدثاً مؤلماً للمسلمين، ولكنهم استمروا في نشر الدعوة الإسلامية وتطبيق تعاليمه. وقد ترك النبي صلى الله عليه وسلم إرثاً عظيماً من القيم والأخلاق والمبادئ التي لا تزال توجه حياة المسلمين حتى اليوم.
+            </p>
+            <h3 id="siraSourcesTitle">المصادر</h3>
+            <p id="siraSourcesText">
+                - البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.
+                <br>
+                - ابن هشام، عبد الملك. (2001). السيرة النبوية. دار الكتب العلمية.
+                <br>
+                - ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.
+            </p>
+        </div>
+
+        <div id="abuBakr" class="content">
+            <h2 id="abuBakrTitle">سيرة أبو بكر الصديق</h2>
+            <p id="abuBakrText">
+                وُلد أبو بكر الصديق رضي الله عنه في مكة وكان من أوائل الذين أسلموا. كان صديقًا حميمًا للنبي محمد صلى الله عليه وسلم ورافقه في الهجرة إلى المدينة. كان له دور كبير في دعم الدعوة الإسلامية وكان أول خليفة للمسلمين بعد وفاة النبي.
+                <br><br>
+                قصة إسلامه: أسلم أبو بكر الصديق في وقت مبكر من الدعوة الإسلامية وكان له دور كبير في نشر الإسلام. كان يحث الناس على اعتناق الإسلام وكان من كبار المنفقين في سبيل الله. كان له دور كبير في تحرير العبيد الذين كانوا يُعذبون بسبب إسلامهم، مثل بلال بن رباح.
+                <br><br>
+                خلافته: بعد وفاة النبي، تم اختيار أبو بكر كأول خليفة للمسلمين. كانت خلافته مليئة بالتحديات، حيث قاد حروب الردة ضد القبائل التي ارتدت عن الإسلام بعد وفاة النبي. كان له دور كبير في توحيد المسلمين وقيادة الجيوش الإسلامية في هذه الحروب.
+                <br><br>
+                قصة حروب الردة: بعد وفاة النبي محمد صلى الله عليه وسلم، ارتدت بعض القبائل عن الإسلام ورفضت دفع الزكاة. قاد أبو بكر الصديق حروب الردة لاستعادة وحدة المسلمين ونشر الإسلام في الجزيرة العربية. كانت هذه الحروب من أبرز إنجازاته في خلافته.
+                <br><br>
+                وفاته: توفي أبو بكر الصديق في العام الثالث عشر للهجرة بعد مرض قصير. ترك وراءه إرثاً عظيماً من القيادة الحكيمة والعدل والشجاعة.
+            </p>
+            <h3 id="abuBakrSourcesTitle">المصادر</h3>
+            <p id="abuBakrSourcesText">
+                - البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.
+                <br>
+                - ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.
+                <br>
+                - الطبري، محمد بن جرير. (2003). تاريخ الرسل والملوك. دار المعارف.
+            </p>
+        </div>
+
+        <div id="umar" class="content">
+            <h2 id="umarTitle">سيرة عمر بن الخطاب</h2>
+            <p id="umarText">
+                وُلد عمر بن الخطاب رضي الله عنه في مكة وكان من أشد المعارضين للإسلام في بدايته. أسلم بعد سماعه آيات من القرآن وأصبح من كبار الصحابة والقادة في الإسلام. عُرف بعدله وحكمته وكان له دور كبير في توسع الدولة الإسلامية.
+                <br><br>
+                قصة إسلامه: كان عمر بن الخطاب من أشد المعارضين للإسلام، ولكنه أسلم بعد سماعه آيات من القرآن. ذهب إلى بيت أخته فاطمة ليسألها عن الإسلام وسمعها تقرأ سورة طه. تأثر بكلمات القرآن وطلب من أخته أن يقرأه بنفسه. بعد قراءته، ذهب إلى النبي محمد صلى الله عليه وسلم وأعلن إسلامه.
+                <br><br>
+                خلافته: أصبح عمر بن الخطاب الخليفة الثاني بعد وفاة أبو بكر الصديق. كان له دور كبير في تنظيم الدولة الإسلامية وتوسيعها. كان معروفاً بعدله وحكمته وكان يقود الجيوش بنفسه في العديد من المعارك.
+                <br><br>
+                قصة تنظيم الدولة الإسلامية: أسس عمر بن الخطاب نظام الشورى واختيار القضاة والإدارة العامة. كان له دور كبير في بناء المدن وتطوير البنية التحتية للدولة الإسلامية.
+                <br><br>
+                قصة توسع الدولة الإسلامية: في عهد عمر بن الخطاب، توسعت الدولة الإسلامية بشكل كبير، حيث فتح المسلمون بلاد الشام والعراق ومصر وفارس. كان له دور كبير في نشر الإسلام وبناء مجتمع إسلامي قوي.
+                <br><br>
+                وفاته: استشهد عمر بن الخطاب رضي الله عنه في المسجد النبوي على يد أبو لؤلؤة المجوسي. كانت وفاته خسارة كبيرة للمسلمين، ولكنه ترك وراءه إرثاً عظيماً من العدل والحكمة والقوة.
+            </p>
+            <h3 id="umarSourcesTitle">المصادر</h3>
+            <p id="umarSourcesText">
+                - البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.
+                <br>
+                - ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.
+                <br>
+                - الطبري، محمد بن جرير. (2003). تاريخ الرسل والملوك. دار المعارف.
+            </p>
+        </div>
+
+        <div id="uthman" class="content">
+            <h2 id="uthmanTitle">سيرة عثمان بن عفان</h2>
+            <p id="uthmanText">
+                وُلد عثمان بن عفان رضي الله عنه في مكة وكان من أوائل الذين اعتنقوا الإسلام. كان معروفاً بجوده وكرمه وشارك في العديد من الغزوات مع النبي محمد صلى الله عليه وسلم. أصبح الخليفة الثالث للمسلمين.
+                <br><br>
+                قصة إسلامه: أسلم عثمان بن عفان في وقت مبكر من الدعوة الإسلامية وكان له دور كبير في نشر الإسلام. كان يحث الناس على اعتناق الإسلام وكان من كبار المنفقين في سبيل الله. كان له دور كبير في تحرير العبيد الذين كانوا يُعذبون بسبب إسلامهم.
+                <br><br>
+                خلافته: بعد وفاة عمر بن الخطاب، تم اختيار عثمان بن عفان كخليفة ثالث للمسلمين. كان له دور كبير في نشر الإسلام وتجميع القرآن الكريم في مصحف واحد. كان معروفاً بجوده وكرمه وكان يساهم بماله في خدمة المسلمين.
+                <br><br>
+                قصة تجميع القرآن الكريم: في عهد عثمان بن عفان، تم تجميع القرآن الكريم في مصحف واحد للحفاظ على نصوص القرآن وتوحيد القراءات. كان هذا الإنجاز من أبرز إنجازاته في خلافته.
+                <br><br>
+                وفاته: استشهد عثمان بن عفان رضي الله عنه في المدينة المنورة بعد أن حاصرته مجموعة من المتمردين في بيته. كان قتله نقطة تحول في تاريخ الإسلام وأدى إلى فتنة كبيرة بين المسلمين.
+            </p>
+            <h3 id="uthmanSourcesTitle">المصادر</h3>
+            <p id="uthmanSourcesText">
+                - البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.
+                <br>
+                - ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.
+                <br>
+                - الطبري، محمد بن جرير. (2003). تاريخ الرسل والملوك. دار المعارف.
+            </p>
+        </div>
+
+        <div id="ali" class="content">
+            <h2 id="aliTitle">سيرة علي بن أبي طالب</h2>
+            <p id="aliText">
+                وُلد علي بن أبي طالب رضي الله عنه في مكة وكان أول من أسلم من الصبيان. كان ابن عم النبي محمد صلى الله عليه وسلم وزوج ابنته فاطمة الزهراء. كان من أشجع الفرسان وأبرز القادة في الإسلام.
+                <br><br>
+                قصة إسلامه: أسلم علي بن أبي طالب في سن مبكرة وكان له دور كبير في نشر الإسلام والدفاع عن النبي محمد صلى الله عليه وسلم. شارك في العديد من الغزوات والمعارك وكان من أبرز القادة في جيش المسلمين.
+                <br><br>
+                خلافته: بعد استشهاد عثمان بن عفان، تم اختيار علي بن أبي طالب كخليفة رابع للمسلمين. كانت خلافته مليئة بالتحديات والفتن، ولكنه كان معروفاً بعدله وشجاعته في مواجهة الأعداء.
+                <br><br>
+                قصة معركة الجمل: كانت من أبرز المعارك التي وقعت في عهد علي بن أبي طالب حيث واجه فيها قوات السيدة عائشة وطلحة والزبير. انتهت المعركة بانتصار قوات علي ومقتل العديد من الصحابة.
+                <br><br>
+                قصة معركة صفين: وقعت بين جيش علي بن أبي طالب وجيش معاوية بن أبي سفيان. كانت معركة دامية ولم تنته بنصر حاسم لأي من الطرفين، ولكنها أسست لانقسام كبير بين المسلمين.
+                <br><br>
+                وفاته: استشهد علي بن أبي طالب رضي الله عنه في الكوفة على يد عبد الرحمن بن ملجم. كان استشهاده نهاية لفترة من الفتن والصراعات الداخلية في الإسلام.
+            </p>
+            <h3 id="aliSourcesTitle">المصادر</h3>
+            <p id="aliSourcesText">
+                - البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.
+                <br>
+                - ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.
+                <br>
+                - الطبري، محمد بن جرير. (2003). تاريخ الرسل والملوك. دار المعارف.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 مختصر السيرة النبوية وصحابة النبي. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        const arabicContent = {
+            mainTitle: "مختصر السيرة النبوية وصحابة النبي",
+            siraButton: "مختصر السيرة النبوية",
+            abuBakrButton: "مختصر سيرة أبو بكر الصديق",
+            umarButton: "مختصر سيرة عمر بن الخطاب",
+            uthmanButton: "مختصر سيرة عثمان بن عفان",
+            aliButton: "مختصر سيرة علي بن أبي طالب",
+            siraTitle: "سيرة النبي محمد صلى الله عليه وسلم",
+            siraText: "وُلد النبي محمد صلى الله عليه وسلم في مكة في عام الفيل، وكان ذلك في الثاني عشر من ربيع الأول. نشأ يتيم الأب والأم، حيث توفي والده عبد الله قبل ولادته، وتوفيت والدته آمنة بنت وهب وهو في سن السادسة. كفله جده عبد المطلب ثم عمه أبو طالب. عاش النبي محمد صلى الله عليه وسلم حياة بسيطة في بداية حياته، حيث عمل راعياً للغنم في صغره، وكان معروفاً بصدقه وأمانته بين قومه. تزوج من السيدة خديجة بنت خويلد رضي الله عنها وهو في سن الخامسة والعشرين، وأنجب منها جميع أبنائه ما عدا إبراهيم. قصة إعادة بناء الكعبة: عندما كان النبي صلى الله عليه وسلم في الخامسة والثلاثين من عمره، اجتمعت قريش لإعادة بناء الكعبة بعد أن تصدعت جدرانها. وعندما وصلوا إلى وضع الحجر الأسود، اختلفت القبائل حول من يضعه في مكانه. لحل هذا النزاع، اقترحوا أن يحكم بينهم أول من يدخل المسجد. وكان النبي محمد صلى الله عليه وسلم هو أول من دخل. فوضع الحجر في رداء وطلب من رؤساء القبائل حمل الرداء معاً، ثم وضع الحجر بنفسه في مكانه.",
+            prophethoodTitle: "البعثة النبوية",
+            prophethoodText: "بدأ الوحي ينزل على النبي محمد صلى الله عليه وسلم عندما كان في الأربعين من عمره، وذلك عندما كان يتعبد في غار حراء. وكانت أول آية نزلت عليه هي: 'اقرأ باسم ربك الذي خلق'. بدأت الدعوة إلى الإسلام سرًا، ثم جهر النبي بالدعوة بعد ثلاثة سنوات من بدء الوحي. قصة نزول الوحي: كان النبي صلى الله عليه وسلم يتعبد في غار حراء، فجاءه جبريل عليه السلام وقال له: 'اقرأ'. فقال النبي: 'ما أنا بقارئ'. ثم أعاد جبريل قوله مرتين حتى قال النبي: 'ما أنا بقارئ'. ثم قال له جبريل: 'اقرأ باسم ربك الذي خلق، خلق الإنسان من علق، اقرأ وربك الأكرم، الذي علم بالقلم، علم الإنسان ما لم يعلم'. واجه النبي محمد صلى الله عليه وسلم وأصحابه الكثير من العذاب والاضطهاد من قبل قريش، ولكنهم استمروا في الدعوة إلى الله. أسلم عدد من كبار الصحابة في بداية الدعوة مثل أبي بكر الصديق، وعمر بن الخطاب، وعثمان بن عفان، وعلي بن أبي طالب. قصة إسلام عمر بن الخطاب: كان عمر بن الخطاب من أشد المعارضين للإسلام، ولكنه أسلم بعد أن سمع آيات من القرآن الكريم. ذهب عمر إلى بيت أخته فاطمة ليعرف حقيقة إسلامها، فسمعها تقرأ سورة طه. تأثر عمر بكلمات القرآن وطلب من أخته أن يقرأه بنفسه. وبعد قراءته، ذهب إلى النبي محمد صلى الله عليه وسلم وأعلن إسلامه.",
+            migrationTitle: "الهجرة",
+            migrationText: "عندما اشتد أذى قريش للمسلمين، أذن الله لنبيه بالهجرة إلى المدينة المنورة. وكان ذلك في السنة الثالثة عشرة من البعثة النبوية. استقبل أهل المدينة النبي محمد صلى الله عليه وسلم وأصحابه بالترحيب والأنصار. قصة الهجرة: خططت قريش لقتل النبي صلى الله عليه وسلم، ولكنه علم بخطتهم وخرج من مكة ليلاً مع صاحبه أبي بكر الصديق. اختبأ النبي وصاحبه في غار ثور لمدة ثلاثة أيام. ثم واصلا الرحلة إلى المدينة. وفي الطريق، وقعت أحداث عديدة مثل حادثة سراقة بن مالك الذي حاول القبض على النبي ولكنه فشل. كانت الهجرة حدثاً مفصلياً في تاريخ الإسلام، حيث بدأ المسلمون في بناء مجتمع جديد في المدينة. وقد آخى النبي صلى الله عليه وسلم بين المهاجرين والأنصار، ووضع أسس الدولة الإسلامية الجديدة.",
+            medinaTitle: "الحياة في المدينة",
+            medinaText: "في المدينة، أسس النبي محمد صلى الله عليه وسلم الدولة الإسلامية الأولى. وبدأ ببناء المسجد النبوي، وآخى بين المهاجرين والأنصار، ووضع صحيفة المدينة التي نظمت العلاقات بين المسلمين وغيرهم من سكان المدينة. قصة بناء المسجد النبوي: عند وصول النبي صلى الله عليه وسلم إلى المدينة، اشترى قطعة أرض لبناء المسجد. شارك النبي بنفسه في نقل الحجارة وبناء المسجد. كان المسجد مركزاً للحياة الاجتماعية والدينية والسياسية في المدينة. خاض المسلمون العديد من الغزوات والمعارك للدفاع عن الإسلام والمجتمع المسلم، وكانت أبرز هذه الغزوات: غزوة بدر، غزوة أحد، غزوة الأحزاب. كما عقد النبي محمد صلى الله عليه وسلم عدة معاهدات واتفاقيات مع القبائل المجاورة لضمان السلام ونشر الدعوة الإسلامية. قصة غزوة بدر: كانت أول معركة كبرى بين المسلمين وقريش. على الرغم من أن المسلمين كانوا أقل عدداً وعتاداً، إلا أنهم انتصروا بنصر من الله. قتل في المعركة العديد من قادة قريش، وأسر المسلمون عدداً كبيراً من الأسرى. قصة غزوة الأحزاب: تجمعت قبائل مختلفة للهجوم على المدينة، وحفر المسلمون خندقاً حول المدينة للدفاع عنها. حاصر الأحزاب المدينة لمدة شهر، ولكن بفضل حكمة النبي وتعاون المسلمين، تمكنوا من صد الهجوم.",
+            deathTitle: "الوفاة",
+            deathText: "توفي النبي محمد صلى الله عليه وسلم في الثاني عشر من ربيع الأول في السنة الحادية عشرة للهجرة. ودفن في حجرة السيدة عائشة بجانب المسجد النبوي في المدينة المنورة. قصة مرض النبي ووفاته: بدأ النبي يشعر بأعراض المرض بعد حجة الوداع، واستمر مرضه لعدة أيام. في أيامه الأخيرة، استأذن من زوجاته أن يبقى في بيت عائشة رضي الله عنها. عندما اشتد به المرض، جمع الصحابة وأوصاهم بالتمسك بالقرآن والسنة. وفي يوم وفاته، خرج النبي إلى المسجد وأمّ الناس في الصلاة ثم عاد إلى بيته حيث توفي. كانت وفاة النبي محمد صلى الله عليه وسلم حدثاً مؤلماً للمسلمين، ولكنهم استمروا في نشر الدعوة الإسلامية وتطبيق تعاليمه. وقد ترك النبي صلى الله عليه وسلم إرثاً عظيماً من القيم والأخلاق والمبادئ التي لا تزال توجه حياة المسلمين حتى اليوم.",
+            siraSourcesTitle: "المصادر",
+            siraSourcesText: "- البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.<br>- ابن هشام، عبد الملك. (2001). السيرة النبوية. دار الكتب العلمية.<br>- ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.",
+            abuBakrTitle: "سيرة أبو بكر الصديق",
+            abuBakrText: "وُلد أبو بكر الصديق رضي الله عنه في مكة وكان من أوائل الذين أسلموا. كان صديقًا حميمًا للنبي محمد صلى الله عليه وسلم ورافقه في الهجرة إلى المدينة. كان له دور كبير في دعم الدعوة الإسلامية وكان أول خليفة للمسلمين بعد وفاة النبي. قصة إسلامه: أسلم أبو بكر الصديق في وقت مبكر من الدعوة الإسلامية وكان له دور كبير في نشر الإسلام. كان يحث الناس على اعتناق الإسلام وكان من كبار المنفقين في سبيل الله. كان له دور كبير في تحرير العبيد الذين كانوا يُعذبون بسبب إسلامهم، مثل بلال بن رباح. خلافته: بعد وفاة النبي، تم اختيار أبو بكر كأول خليفة للمسلمين. كانت خلافته مليئة بالتحديات، حيث قاد حروب الردة ضد القبائل التي ارتدت عن الإسلام بعد وفاة النبي. كان له دور كبير في توحيد المسلمين وقيادة الجيوش الإسلامية في هذه الحروب. قصة حروب الردة: بعد وفاة النبي محمد صلى الله عليه وسلم، ارتدت بعض القبائل عن الإسلام ورفضت دفع الزكاة. قاد أبو بكر الصديق حروب الردة لاستعادة وحدة المسلمين ونشر الإسلام في الجزيرة العربية. كانت هذه الحروب من أبرز إنجازاته في خلافته. وفاته: توفي أبو بكر الصديق في العام الثالث عشر للهجرة بعد مرض قصير. ترك وراءه إرثاً عظيماً من القيادة الحكيمة والعدل والشجاعة.",
+            abuBakrSourcesTitle: "المصادر",
+            abuBakrSourcesText: "- البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.<br>- ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.<br>- الطبري، محمد بن جرير. (2003). تاريخ الرسل والملوك. دار المعارف.",
+            umarTitle: "سيرة عمر بن الخطاب",
+            umarText: "وُلد عمر بن الخطاب رضي الله عنه في مكة وكان من أشد المعارضين للإسلام في بدايته. أسلم بعد سماعه آيات من القرآن وأصبح من كبار الصحابة والقادة في الإسلام. عُرف بعدله وحكمته وكان له دور كبير في توسع الدولة الإسلامية. قصة إسلامه: كان عمر بن الخطاب من أشد المعارضين للإسلام، ولكنه أسلم بعد سماعه آيات من القرآن. ذهب إلى بيت أخته فاطمة ليسألها عن الإسلام وسمعها تقرأ سورة طه. تأثر بكلمات القرآن وطلب من أخته أن يقرأه بنفسه. بعد قراءته، ذهب إلى النبي محمد صلى الله عليه وسلم وأعلن إسلامه. خلافته: أصبح عمر بن الخطاب الخليفة الثاني بعد وفاة أبو بكر الصديق. كان له دور كبير في تنظيم الدولة الإسلامية وتوسيعها. كان معروفاً بعدله وحكمته وكان يقود الجيوش بنفسه في العديد من المعارك. قصة تنظيم الدولة الإسلامية: أسس عمر بن الخطاب نظام الشورى واختيار القضاة والإدارة العامة. كان له دور كبير في بناء المدن وتطوير البنية التحتية للدولة الإسلامية. قصة توسع الدولة الإسلامية: في عهد عمر بن الخطاب، توسعت الدولة الإسلامية بشكل كبير، حيث فتح المسلمون بلاد الشام والعراق ومصر وفارس. كان له دور كبير في نشر الإسلام وبناء مجتمع إسلامي قوي. وفاته: استشهد عمر بن الخطاب رضي الله عنه في المسجد النبوي على يد أبو لؤلؤة المجوسي. كانت وفاته خسارة كبيرة للمسلمين، ولكنه ترك وراءه إرثاً عظيماً من العدل والحكمة والقوة.",
+            umarSourcesTitle: "المصادر",
+            umarSourcesText: "- البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.<br>- ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.<br>- الطبري، محمد بن جرير. (2003). تاريخ الرسل والملوك. دار المعارف.",
+            uthmanTitle: "سيرة عثمان بن عفان",
+            uthmanText: "وُلد عثمان بن عفان رضي الله عنه في مكة وكان من أوائل الذين اعتنقوا الإسلام. كان معروفاً بجوده وكرمه وشارك في العديد من الغزوات مع النبي محمد صلى الله عليه وسلم. أصبح الخليفة الثالث للمسلمين. قصة إسلامه: أسلم عثمان بن عفان في وقت مبكر من الدعوة الإسلامية وكان له دور كبير في نشر الإسلام. كان يحث الناس على اعتناق الإسلام وكان من كبار المنفقين في سبيل الله. كان له دور كبير في تحرير العبيد الذين كانوا يُعذبون بسبب إسلامهم. خلافته: بعد وفاة عمر بن الخطاب، تم اختيار عثمان بن عفان كخليفة ثالث للمسلمين. كان له دور كبير في نشر الإسلام وتجميع القرآن الكريم في مصحف واحد. كان معروفاً بجوده وكرمه وكان يساهم بماله في خدمة المسلمين. قصة تجميع القرآن الكريم: في عهد عثمان بن عفان، تم تجميع القرآن الكريم في مصحف واحد للحفاظ على نصوص القرآن وتوحيد القراءات. كان هذا الإنجاز من أبرز إنجازاته في خلافته. وفاته: استشهد عثمان بن عفان رضي الله عنه في المدينة المنورة بعد أن حاصرته مجموعة من المتمردين في بيته. كان قتله نقطة تحول في تاريخ الإسلام وأدى إلى فتنة كبيرة بين المسلمين.",
+            uthmanSourcesTitle: "المصادر",
+            uthmanSourcesText: "- البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.<br>- ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.<br>- الطبري، محمد بن جرير. (2003). تاريخ الرسل والملوك. دار المعارف.",
+            aliTitle: "سيرة علي بن أبي طالب",
+            aliText: "وُلد علي بن أبي طالب رضي الله عنه في مكة وكان أول من أسلم من الصبيان. كان ابن عم النبي محمد صلى الله عليه وسلم وزوج ابنته فاطمة الزهراء. كان من أشجع الفرسان وأبرز القادة في الإسلام. قصة إسلامه: أسلم علي بن أبي طالب في سن مبكرة وكان له دور كبير في نشر الإسلام والدفاع عن النبي محمد صلى الله عليه وسلم. شارك في العديد من الغزوات والمعارك وكان من أبرز القادة في جيش المسلمين. خلافته: بعد استشهاد عثمان بن عفان، تم اختيار علي بن أبي طالب كخليفة رابع للمسلمين. كانت خلافته مليئة بالتحديات والفتن، ولكنه كان معروفاً بعدله وشجاعته في مواجهة الأعداء. قصة معركة الجمل: كانت من أبرز المعارك التي وقعت في عهد علي بن أبي طالب حيث واجه فيها قوات السيدة عائشة وطلحة والزبير. انتهت المعركة بانتصار قوات علي ومقتل العديد من الصحابة. قصة معركة صفين: وقعت بين جيش علي بن أبي طالب وجيش معاوية بن أبي سفيان. كانت معركة دامية ولم تنته بنصر حاسم لأي من الطرفين، ولكنها أسست لانقسام كبير بين المسلمين. وفاته: استشهد علي بن أبي طالب رضي الله عنه في الكوفة على يد عبد الرحمن بن ملجم. كان استشهاده نهاية لفترة من الفتن والصراعات الداخلية في الإسلام.",
+            aliSourcesTitle: "المصادر",
+            aliSourcesText: "- البخاري، محمد بن إسماعيل. (1997). صحيح البخاري. دار ابن كثير.<br>- ابن كثير، إسماعيل بن عمر. (1998). البداية والنهاية. دار ابن كثير.<br>- الطبري، محمد بن جرير. (2003). تاريخ الرسل والملوك. دار المعارف."
+        };
+
+        const englishContent = {
+            mainTitle: "Brief Biography of the Prophet and His Companions",
+            siraButton: "Brief Biography of the Prophet",
+            abuBakrButton: "Brief Biography of Abu Bakr al-Siddiq",
+            umarButton: "Brief Biography of Umar ibn al-Khattab",
+            uthmanButton: "Brief Biography of Uthman ibn Affan",
+            aliButton: "Brief Biography of Ali ibn Abi Talib",
+            siraTitle: "Biography of Prophet Muhammad",
+            siraText: "The Prophet Muhammad was born in Mecca in the Year of the Elephant, on the twelfth of Rabi' al-Awwal. He grew up as an orphan, with his father Abdullah dying before his birth, and his mother Amina bint Wahb passing away when he was six years old. He was taken care of by his grandfather Abdul Muttalib and then his uncle Abu Talib. The Prophet Muhammad led a simple life in his early years, working as a shepherd in his youth and earning a reputation for his honesty and trustworthiness. He married Khadijah bint Khuwaylid at the age of twenty-five, and they had all of his children except for Ibrahim. The story of rebuilding the Kaaba: When the Prophet was thirty-five years old, the Quraysh decided to rebuild the Kaaba after its walls had cracked. When they reached the point of placing the Black Stone, the tribes disputed who should have the honor of setting it in place. To resolve this, they agreed that the first person to enter the mosque would decide. The first to enter was the Prophet Muhammad. He placed the stone in a cloth and had the leaders of the tribes lift it together, then he placed the stone himself.",
+            prophethoodTitle: "Prophethood",
+            prophethoodText: "The revelation began to come to the Prophet Muhammad when he was forty years old, while he was worshipping in the Cave of Hira. The first verse revealed was: 'Read in the name of your Lord who created.' The call to Islam began secretly, then the Prophet publicly called people to Islam three years after the start of the revelation. The story of the first revelation: The Prophet was worshipping in the Cave of Hira when Gabriel came to him and said, 'Read.' The Prophet replied, 'I am not a reader.' Gabriel repeated this twice until the Prophet said, 'I am not a reader.' Then Gabriel said, 'Read in the name of your Lord who created, created man from a clot, read and your Lord is the most generous, who taught by the pen, taught man what he did not know.' The Prophet and his followers faced much persecution and torture from the Quraysh, but they continued to call people to God. Many prominent companions embraced Islam in the early days, such as Abu Bakr al-Siddiq, Umar ibn al-Khattab, Uthman ibn Affan, and Ali ibn Abi Talib. The story of Umar ibn al-Khattab's conversion: Umar was one of the staunchest opponents of Islam, but he converted after hearing verses from the Quran. He went to his sister Fatimah's house to confront her about her faith and heard her reciting Surah Taha. Moved by the words of the Quran, he asked to read it himself. After reading, he went to the Prophet Muhammad and declared his conversion to Islam.",
+            migrationTitle: "Migration",
+            migrationText: "When the persecution by the Quraysh intensified, God permitted the Prophet to migrate to Medina. This occurred in the thirteenth year of the Prophethood. The people of Medina welcomed the Prophet and his companions warmly. The story of the migration: The Quraysh plotted to kill the Prophet, but he was aware of their plan and left Mecca at night with his companion Abu Bakr al-Siddiq. They hid in the Cave of Thawr for three days. Then they continued their journey to Medina. Along the way, several events took place, such as the incident with Suraqa bin Malik who tried to capture the Prophet but failed. The migration was a pivotal event in Islamic history, marking the beginning of a new community in Medina. The Prophet established brotherhood between the emigrants and the helpers, and laid the foundations of the new Islamic state.",
+            medinaTitle: "Life in Medina",
+            medinaText: "In Medina, the Prophet Muhammad established the first Islamic state. He began by building the Prophet's Mosque, created bonds of brotherhood between the emigrants and the helpers, and drafted the Constitution of Medina, which organized relations between Muslims and other inhabitants of the city. The story of building the Prophet's Mosque: Upon arriving in Medina, the Prophet purchased a piece of land to build the mosque. He participated in carrying stones and building the mosque himself. The mosque became the center of social, religious, and political life in Medina. The Muslims engaged in many battles and expeditions to defend Islam and the Muslim community. Among the most notable were the Battle of Badr, the Battle of Uhud, and the Battle of the Trench. The Prophet also made several treaties and agreements with neighboring tribes to ensure peace and spread the message of Islam. The story of the Battle of Badr: This was the first major battle between the Muslims and the Quraysh. Despite being outnumbered and out-armed, the Muslims achieved a significant victory with divine help. Many leaders of the Quraysh were killed, and a large number of captives were taken by the Muslims. The story of the Battle of the Trench: Various tribes gathered to attack Medina. The Muslims dug a trench around the city to defend it. The siege lasted for a month, but with the Prophet's wisdom and the cooperation of the Muslims, they managed to repel the attack.",
+            deathTitle: "Death",
+            deathText: "The Prophet Muhammad passed away on the twelfth of Rabi' al-Awwal in the eleventh year of Hijra. He was buried in the room of Aisha next to the Prophet's Mosque in Medina. The story of the Prophet's illness and death: The Prophet began to feel the symptoms of illness after the Farewell Pilgrimage, and his condition continued for several days. In his final days, he sought permission from his wives to stay in the house of Aisha. When his illness intensified, he gathered his companions and advised them to adhere to the Quran and Sunnah. On the day of his death, the Prophet came out to the mosque and led the people in prayer, then returned to his house where he passed away. The death of the Prophet Muhammad was a momentous event for the Muslims, but they continued to spread the message of Islam and follow his teachings. The Prophet left a great legacy of values, ethics, and principles that continue to guide the lives of Muslims to this day.",
+            siraSourcesTitle: "Sources",
+            siraSourcesText: "- Al-Bukhari, Muhammad ibn Ismail. (1997). Sahih Al-Bukhari. Dar Ibn Kathir.<br>- Ibn Hisham, Abdul Malik. (2001). Al-Sirah Al-Nabawiyyah. Dar Al-Kutub Al-Ilmiyyah.<br>- Ibn Kathir, Ismail ibn Umar. (1998). Al-Bidaya wa'l-Nihaya. Dar Ibn Kathir.",
+            abuBakrTitle: "Biography of Abu Bakr al-Siddiq",
+            abuBakrText: "Abu Bakr al-Siddiq was born in Mecca and was one of the earliest converts to Islam. He was a close friend of the Prophet Muhammad and accompanied him on the migration to Medina. He played a significant role in supporting the Islamic call and was the first caliph after the Prophet's death. The story of his conversion: Abu Bakr al-Siddiq converted to Islam early in the Islamic call and played a significant role in spreading Islam. He urged people to embrace Islam and was one of the major benefactors in the cause of God. He played a significant role in freeing slaves who were tortured for their faith, such as Bilal ibn Rabah. His caliphate: After the Prophet's death, Abu Bakr was chosen as the first caliph of the Muslims. His caliphate was filled with challenges, as he led the wars against apostasy among the tribes that had renounced Islam after the Prophet's death. He played a significant role in uniting the Muslims and leading the Islamic armies in these wars. The story of the apostasy wars: After the Prophet Muhammad's death, some tribes renounced Islam and refused to pay zakat. Abu Bakr al-Siddiq led the apostasy wars to restore the unity of the Muslims and spread Islam throughout the Arabian Peninsula. These wars were among his most notable achievements during his caliphate. His death: Abu Bakr al-Siddiq died in the 13th year of Hijra after a short illness. He left behind a great legacy of wise leadership, justice, and courage.",
+            abuBakrSourcesTitle: "Sources",
+            abuBakrSourcesText: "- Al-Bukhari, Muhammad ibn Ismail. (1997). Sahih Al-Bukhari. Dar Ibn Kathir.<br>- Ibn Kathir, Ismail ibn Umar. (1998). Al-Bidaya wa'l-Nihaya. Dar Ibn Kathir.<br>- Al-Tabari, Muhammad ibn Jarir. (2003). Tarikh Al-Rusul wa'l-Muluk. Dar Al-Ma'arif.",
+            umarTitle: "Biography of Umar ibn al-Khattab",
+            umarText: "Umar ibn al-Khattab was born in Mecca and was initially one of the fiercest opponents of Islam. He converted after hearing verses from the Quran and became one of the most prominent companions and leaders in Islam. He was known for his justice and wisdom and played a significant role in the expansion of the Islamic state. The story of his conversion: Umar ibn al-Khattab was one of the staunchest opponents of Islam, but he converted after hearing verses from the Quran. He went to his sister Fatimah to confront her about her faith and heard her reciting Surah Taha. Moved by the words of the Quran, he asked to read it himself. After reading it, he went to the Prophet Muhammad and declared his conversion to Islam. His caliphate: Umar ibn al-Khattab became the second caliph after Abu Bakr al-Siddiq's death. He played a significant role in organizing and expanding the Islamic state. He was known for his justice and wisdom and personally led the armies in many battles. The story of organizing the Islamic state: Umar ibn al-Khattab established the system of consultation (shura) and appointed judges and public administrators. He played a significant role in building cities and developing the infrastructure of the Islamic state. The story of the expansion of the Islamic state: During Umar ibn al-Khattab's caliphate, the Islamic state expanded significantly, with the Muslims conquering Syria, Iraq, Egypt, and Persia. He played a significant role in spreading Islam and building a strong Islamic community. His death: Umar ibn al-Khattab was assassinated in the Prophet's Mosque by Abu Lulu al-Majusi. His death was a great loss to the Muslims, but he left behind a great legacy of justice, wisdom, and strength.",
+            umarSourcesTitle: "Sources",
+            umarSourcesText: "- Al-Bukhari, Muhammad ibn Ismail. (1997). Sahih Al-Bukhari. Dar Ibn Kathir.<br>- Ibn Kathir, Ismail ibn Umar. (1998). Al-Bidaya wa'l-Nihaya. Dar Ibn Kathir.<br>- Al-Tabari, Muhammad ibn Jarir. (2003). Tarikh Al-Rusul wa'l-Muluk. Dar Al-Ma'arif.",
+            uthmanTitle: "Biography of Uthman ibn Affan",
+            uthmanText: "Uthman ibn Affan was born in Mecca and was one of the earliest converts to Islam. He was known for his generosity and participated in many battles with the Prophet Muhammad. He became the third caliph of the Muslims. The story of his conversion: Uthman ibn Affan converted to Islam early in the Islamic call and played a significant role in spreading Islam. He urged people to embrace Islam and was one of the major benefactors in the cause of God. He played a significant role in freeing slaves who were tortured for their faith. His caliphate: After Umar ibn al-Khattab's death, Uthman ibn Affan was chosen as the third caliph of the Muslims. He played a significant role in spreading Islam and compiling the Quran into a single volume. He was known for his generosity and contributed his wealth to serving the Muslims. The story of compiling the Quran: During Uthman ibn Affan's caliphate, the Quran was compiled into a single volume to preserve its text and unify the recitations. This achievement was one of his most notable during his caliphate. His death: Uthman ibn Affan was assassinated in Medina after being besieged by a group of rebels in his house. His murder marked a turning point in Islamic history and led to a great fitna (civil strife) among the Muslims.",
+            uthmanSourcesTitle: "Sources",
+            uthmanSourcesText: "- Al-Bukhari, Muhammad ibn Ismail. (1997). Sahih Al-Bukhari. Dar Ibn Kathir.<br>- Ibn Kathir, Ismail ibn Umar. (1998). Al-Bidaya wa'l-Nihaya. Dar Ibn Kathir.<br>- Al-Tabari, Muhammad ibn Jarir. (2003). Tarikh Al-Rusul wa'l-Muluk. Dar Al-Ma'arif.",
+            aliTitle: "Biography of Ali ibn Abi Talib",
+            aliText: "Ali ibn Abi Talib was born in Mecca and was the first child to embrace Islam. He was the cousin of the Prophet Muhammad and the husband of his daughter Fatimah al-Zahra. He was one of the bravest knights and most prominent leaders in Islam. The story of his conversion: Ali ibn Abi Talib converted to Islam at an early age and played a significant role in spreading Islam and defending the Prophet Muhammad. He participated in many battles and was one of the most prominent leaders in the Muslim army. His caliphate: After Uthman ibn Affan's assassination, Ali ibn Abi Talib was chosen as the fourth caliph of the Muslims. His caliphate was filled with challenges and fitnas (civil strife), but he was known for his justice and courage in facing enemies. The story of the Battle of the Camel: One of the most notable battles during Ali ibn Abi Talib's caliphate was the Battle of the Camel, where he faced the forces of Aisha, Talha, and Zubair. The battle ended with Ali's forces' victory and the death of many companions. The story of the Battle of Siffin: The battle took place between Ali ibn Abi Talib's army and Muawiyah ibn Abi Sufyan's army. It was a bloody battle that did not end in a decisive victory for either side but laid the foundation for a significant split among the Muslims. His death: Ali ibn Abi Talib was assassinated in Kufa by Abdul Rahman ibn Muljam. His assassination marked the end of a period of fitnas and internal conflicts in Islam.",
+            aliSourcesTitle: "Sources",
+            aliSourcesText: "- Al-Bukhari, Muhammad ibn Ismail. (1997). Sahih Al-Bukhari. Dar Ibn Kathir.<br>- Ibn Kathir, Ismail ibn Umar. (1998). Al-Bidaya wa'l-Nihaya. Dar Ibn Kathir.<br>- Al-Tabari, Muhammad ibn Jarir. (2003). Tarikh Al-Rusul wa'l-Muluk. Dar Al-Ma'arif."
+        };
+
+        function updateContent(language) {
+            const content = language === 'english' ? englishContent : arabicContent;
+
+            document.getElementById('mainTitle').innerHTML = content.mainTitle;
+            document.getElementById('siraButton').innerHTML = content.siraButton;
+            document.getElementById('abuBakrButton').innerHTML = content.abuBakrButton;
+            document.getElementById('umarButton').innerHTML = content.umarButton;
+            document.getElementById('uthmanButton').innerHTML = content.uthmanButton;
+            document.getElementById('aliButton').innerHTML = content.aliButton;
+
+            document.getElementById('siraTitle').innerHTML = content.siraTitle;
+            document.getElementById('siraText').innerHTML = content.siraText;
+            document.getElementById('prophethoodTitle').innerHTML = content.prophethoodTitle;
+            document.getElementById('prophethoodText').innerHTML = content.prophethoodText;
+            document.getElementById('migrationTitle').innerHTML = content.migrationTitle;
+            document.getElementById('migrationText').innerHTML = content.migrationText;
+            document.getElementById('medinaTitle').innerHTML = content.medinaTitle;
+            document.getElementById('medinaText').innerHTML = content.medinaText;
+            document.getElementById('deathTitle').innerHTML = content.deathTitle;
+            document.getElementById('deathText').innerHTML = content.deathText;
+            document.getElementById('siraSourcesTitle').innerHTML = content.siraSourcesTitle;
+            document.getElementById('siraSourcesText').innerHTML = content.siraSourcesText;
+
+            document.getElementById('abuBakrTitle').innerHTML = content.abuBakrTitle;
+            document.getElementById('abuBakrText').innerHTML = content.abuBakrText;
+            document.getElementById('abuBakrSourcesTitle').innerHTML = content.abuBakrSourcesTitle;
+            document.getElementById('abuBakrSourcesText').innerHTML = content.abuBakrSourcesText;
+
+            document.getElementById('umarTitle').innerHTML = content.umarTitle;
+            document.getElementById('umarText').innerHTML = content.umarText;
+            document.getElementById('umarSourcesTitle').innerHTML = content.umarSourcesTitle;
+            document.getElementById('umarSourcesText').innerHTML = content.umarSourcesText;
+
+            document.getElementById('uthmanTitle').innerHTML = content.uthmanTitle;
+            document.getElementById('uthmanText').innerHTML = content.uthmanText;
+            document.getElementById('uthmanSourcesTitle').innerHTML = content.uthmanSourcesTitle;
+            document.getElementById('uthmanSourcesText').innerHTML = content.uthmanSourcesText;
+
+            document.getElementById('aliTitle').innerHTML = content.aliTitle;
+            document.getElementById('aliText').innerHTML = content.aliText;
+            document.getElementById('aliSourcesTitle').innerHTML = content.aliSourcesTitle;
+            document.getElementById('aliSourcesText').innerHTML = content.aliSourcesText;
+        }
+
+        function toggleLanguage() {
+            const isEnglish = document.getElementById('languageButton').innerHTML === 'English';
+            document.getElementById('languageButton').innerHTML = isEnglish ? 'Arabic' : 'English';
+            updateContent(isEnglish ? 'english' : 'arabic');
+            document.body.style.direction = isEnglish ? 'ltr' : 'rtl';
+            document.body.style.textAlign = isEnglish ? 'left' : 'right';
+        }
+
+        function showContent(id) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
